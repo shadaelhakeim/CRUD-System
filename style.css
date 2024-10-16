@@ -1,89 +1,115 @@
-
-:root{
+:root {
     --mainColor: #1a1919;
     --textColor: #333333;
-    --buttonsHover:lightseagreen;
-    --buttons:darkcyan;
+    --buttonsHover: lightseagreen;
+    --buttons: darkcyan;
+}
 
-}
-body{
+body {
     background-color: var(--textColor);
+    margin: 0;
+    padding: 0;
 }
+
 /*title*/
-.crud-title{
-  color: #fff;
-  text-transform: uppercase;
+.crud-title {
+    color: #fff;
+    text-transform: uppercase;
 }
-.crud-title  p{
- font-size: 19px;
+
+.crud-title p {
+    font-size: 19px;
 }
-/*content*/
-.container button{
+
+/* Content */
+.container button {
     background-color: var(--buttons);
     border: none;
     color: #fff;
     border-radius: 50px;
     font-size: 18px;
 }
-.container button:hover{
-background-color: var(--buttonsHover);
-color: #fff;
-}
-.container button:active{
-background-color: var(--buttonsHover) !important;
-color: #fff;
+
+.container button:hover {
+    background-color: var(--buttonsHover);
+    color: #fff;
 }
 
-.container .row .col-md-3{
-    width: 220px;
+.container button:active {
+    background-color: var(--buttonsHover) !important;
+    color: #fff;
 }
-.container .row .total{
-    width: 150px;
-    padding: 10px;
-}
-.container .row .total button{
-    color: white;
-    background-color: #bb1c1c;
-    border-radius: 5px;
-    opacity: 1;
-    }
-.form-control{
+
+.form-control {
     background-color: var(--mainColor);
-        border: none;
-        height: 45px;
-color: #fff;
+    border: none;
+    height: 45px;
+    color: #fff;
 }
+
 .form-control:focus {
-background-color: var(--mainColor); 
-opacity: 0.8;   
-box-shadow: 1.5px 1.5px 2px 3px rgba(0, 148, 148, 0.233);
-color: #fff;
+    background-color: var(--mainColor);
+    opacity: 0.8;
+    box-shadow: 1.5px 1.5px 2px 3px rgba(0, 148, 148, 0.233);
+    color: #fff;
 }
-.container input::-webkit-input-placeholder{
+
+.container input::-webkit-input-placeholder {
     color: gray;
     font-size: 17px;
-   
 }
 
-.crud-display .table{
- margin: 20px;
- 
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .crud-title h1 {
+        font-size: 24px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    /* Adjust button font size */
+    .container button {
+        font-size: 14px;
+        border-radius: 30px;
+    }
+
+    /* Adjust spacing between form elements */
+    .form-control {
+        margin-bottom: 10px;
+    }
+
+    /* Make table scrollable */
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
 }
-.crud-display .table tr th{
+
+.crud-display .table {
+    margin: 20px;
+}
+
+.crud-display .table tr th {
     background-color: var(--textColor) !important;
     border: none;
     color: white;
-    
-}
-.crud-display .table tbody{
-    background-color:transparent !important; 
-    
 }
 
-.crud-display .table tbody td{
-   border: none !important;
-    
+.crud-display .table tbody {
+    background-color: transparent !important;
 }
-.total p{
+
+.crud-display .table tbody td {
+    border: none !important;
+}
+
+.total p {
     color: #fff;
 }
